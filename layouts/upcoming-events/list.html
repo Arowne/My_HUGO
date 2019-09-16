@@ -1,0 +1,15 @@
+{{  partial "header.html" . }}
+
+<div class="jumbotron">
+    {{  range  first 10 .Site.RegularPages }}
+        {{ if eq .Type "events" }}
+            {{ $t := (time .Params.When)}}
+            {{ if $t.After now }}
+                <h1 class="display-4"><a href="{{ .Permalink  }}">{{ .Title }}</a></h1>
+                <h6 class="font-italic text-secondary">{{ .Params.Association }} {{ .Params.When }}</h6>
+                <p class="lead">{{ .Description }}</p>
+                <hr class="my-4">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>

@@ -1,0 +1,9 @@
+{{  partial "header.html" . }}
+<div class="jumbotron">
+    <h1 class="display-4">{{ .Title }}</h1>
+    <h6 class="font-italic text-secondary">{{ .Params.Association }} {{ .Params.When }}</h6>
+    <h4 class="display-6">{{ .Params.Label }}</h4>
+    <h5 class="display-6">{{ .Params.Address }} {{ .Params.City }}</h5>
+    <p class="text-secondary">{{ .Description }}</p>
+    <hr class="my-4">
+</div>
