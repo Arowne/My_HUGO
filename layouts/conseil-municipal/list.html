@@ -2,26 +2,26 @@
 
 
     <section class="bg-light page-section mt-5" id="team">
-        <div class="container">
+        <div class="container mt-5">
           <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading text-uppercase">Municipal Council</h2>
               <h3 class="section-subheading text-muted">Here you can find people how's </h3>
             </div>
           </div>
+          <div class="d-felx justify-content-center">
             {{  range .Data.Pages }}
                 {{ if eq .Type "conseil-municipal" }}
-                <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
                       <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="/img/team/1.jpg" alt="">
-                        <h1 class="display-4">{{ .Params.firstNames }} {{ .Params.lastNames }}</h1>
+                        <img class="mx-auto rounded-circle" src="{{ .Params.Photos }}">
+                        <h1 class="display-4 h4">{{ .Params.firstName }} {{ .Params.lastName }}</h1>
                         <p class="text-muted">{{ .Params.Role }}</p>
                       </div>
                     </div>
                 {{ end }}
             {{ end }}
-          </div>
+          </div>          
         </div>
       </section>
 {{  partial "footer.html" . }}

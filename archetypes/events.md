@@ -1,12 +1,15 @@
 ---
-title: "Paris megaparty"
-address: "15 rue de la rue"
-postalCode : "75008"
+title: "Paris Megaparty"
+address: ""
+postalCode : "75000"
 city: "Paris"
-label: "Hotel de Ville Paris 7ème"
+label: ""
 when: ""
-description: "Best party"
+description: ""
 photos: ""
 important: false
 association: "paris-organisation"
+draft: false
+important: false
+association: false
 ---

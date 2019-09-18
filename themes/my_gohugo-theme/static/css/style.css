@@ -6,9 +6,9 @@ body {
     height: 100%;
     width: 280px;
     position: fixed;
-    z-index: 1;
     top: 0;
     right: 0;
+    z-index: 1;
     background-color:red;
     overflow-x: hidden;
     padding-top: 20px;
@@ -32,7 +32,6 @@ body {
 }
 
 .main, .jumbotron, nav {
-    margin-right: 280px; 
     /* Same as the width of the sidenav */
     font-size: 24px; 
     /* Increased text to enable scrolling */
@@ -49,7 +48,7 @@ body {
 } 
 
 .bg-image-full{
-    height: 500px;
+    height: 700px;
 }
 .jumbotron {
     margin-bottom: 0px!important;
@@ -62,4 +61,21 @@ body {
 
 .list-group-item {
     color: black!important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#contact {
+    z-index: 1000;
+}
+
+.bg-image-full {
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+#contact {
+    background-size: 20% auto;
 }

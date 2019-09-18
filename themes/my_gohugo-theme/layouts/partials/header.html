@@ -34,7 +34,7 @@
                     Menu
                     <i class="fas fa-bars"></i>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-5">
                             <li class="nav-item active">
                                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
@@ -59,15 +59,18 @@
                             </li>
                         </ul>
                     </div>
+                    <span class="navbar-brand js-scroll-trigger font-italic float-right text-light menu-trigger cursor-pointer">
+                        <i class="fas fa-bars"></i>
+                    </span>
                 </div>
               </nav>
-            <div class="sidenav">
-                <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+            <div class="sidenav d-none mt-5 pt-5">
+                <form class="form-inline my-2 my-lg-0 d-flex justify-content-center mt-5 pt-5">
                     <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search">
                     <ul class="list-group search-list-group">
                     </ul> 
                 </form>
-                {{  range  first 10 .Site.RegularPages }}
+                {{  range .Site.RegularPages }}
                     {{ if eq .Type "associations" }}
                         <a href="{{ .Permalink  }}" class="association-link">{{ .Title }}</a>
                     {{ end }}
