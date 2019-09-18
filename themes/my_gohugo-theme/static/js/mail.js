@@ -5,8 +5,8 @@ function sendMail(to, subject, message) {
         Host : "smtp.gmail.com",
         Username : "foohero69@gmail.com",
         Password : "RonronLeFoo1234",
-        To : to,
-        From : "contact@lugdunum.com",
+        To : "aaron.y.boateng@gmail.com",
+        From : to,
         Subject : subject,
         Body : message
     }).then(

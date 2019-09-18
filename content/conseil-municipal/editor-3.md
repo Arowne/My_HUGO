@@ -1,6 +1,6 @@
 ---
 firstName: "Juan"
 lastName: "Miguel"
-role : "Advisor"
-photos: "/img/profil.png"
+role : "Editor"
+photos: "/img/team/4.jpg"
 ---

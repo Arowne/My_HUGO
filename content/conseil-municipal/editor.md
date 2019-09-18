@@ -1,6 +1,6 @@
 ---
-firstName: "Mimoud"
-lastName: "Lougougne"
+firstName: "Ambre"
+lastName: "Lazure"
 role : "Editor"
-photos: "/img/profil.png"
+photos: "/img/team/7.jpg"
 ---

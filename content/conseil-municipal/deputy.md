@@ -1,6 +1,6 @@
 ---
-firstName: "Michel"
+firstName: "Stephanie"
 lastName: "Delalande"
 role : "Deputy"
-photos: "/img/profil.png"
+photos: "/img/team/5.jpg"
 ---

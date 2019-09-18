@@ -1,27 +1,75 @@
 {{  partial "header.html" . }}
 
 
-    <section class="bg-light page-section mt-5" id="team">
+    <section class="bg-light page-section mt-5 org-chart" id="team">
         <div class="container mt-5">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Municipal Council</h2>
-              <h3 class="section-subheading text-muted">Here you can find people how's </h3>
+              <h1 class="text-uppercase mb-5 text-red">Municipal Council</h1>
+              {{  partial "town-hall-presentation.html" . }}
             </div>
           </div>
-          <div class="d-felx justify-content-center">
+          <div class="d-none">
             {{  range .Data.Pages }}
+
                 {{ if eq .Type "conseil-municipal" }}
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                      <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="{{ .Params.Photos }}">
-                        <h1 class="display-4 h4">{{ .Params.firstName }} {{ .Params.lastName }}</h1>
-                        <p class="text-muted">{{ .Params.Role }}</p>
-                      </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-12 conseil-info">
+                        <span class="firstname">{{ .Params.firstName }} </span> <span class="lastname">{{ .Params.lastName }}</span>
+                        <span class="role">{{ .Params.Role }}</span>
+                        <span class="image">{{ .Params.Photos }}</span>
                     </div>
+
                 {{ end }}
             {{ end }}
-          </div>          
+          </div> 
+          <div class="row organigram d-none">
+          {{  range .Data.Pages }}
+
+              {{ if eq .Type "conseil-municipal" }}
+                  {{ if eq .Params.Role "Director" }}
+                    <div class="col-sm-12 col-md-12 col-lg-12 {{ .Params.Role }}">
+                        <div class="row d-flex justify-content-center">
+                          <img class="rounded-circle img-org img-fluid h-25" src="{{ .Params.Photos }}" alt="">
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                          <p class="firstname text-secondary h4 mt-4">{{ .Params.firstName }} {{ .Params.lastName }}</p>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                          <p class="firstname text-secondary">{{ .Params.Role }}</p>
+                        </div>
+                    </div>
+                  {{ else if eq .Params.Role "Deputy"}}
+                    <div class="col-sm-12 col-md-12 col-lg-12 {{ .Params.Role }}">
+                        <div class="row d-flex justify-content-center">
+                          <img class="rounded-circle img-org img-fluid h-25" src="{{ .Params.Photos }}" alt="">
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                          <p class="firstname text-secondary h4 mt-4">{{ .Params.firstName }} {{ .Params.lastName }}</p>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                          <p class="firstname text-secondary">{{ .Params.Role }}</p>
+                        </div>
+                    </div>
+                  {{ else }}  
+                    <div class="col-sm-3 col-md-3 col-lg-3 {{ .Params.Role }}">
+                        <div class="row d-flex justify-content-center">
+                          <img class="rounded-circle img-org img-fluid h-25" src="{{ .Params.Photos }}" alt="">
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                          <p class="firstname text-secondary h4 mt-4">{{ .Params.firstName }} {{ .Params.lastName }}</p>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                          <p class="firstname text-secondary">{{ .Params.Role }}</p>
+                        </div>
+                    </div>            
+                  {{ end }}
+              {{ end }}
+          {{ end }}
+          </div>
+          <div class="row organigram-display">
+
+          </div>      
         </div>
-      </section>
+    </section>
 {{  partial "footer.html" . }}

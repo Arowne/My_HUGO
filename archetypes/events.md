@@ -1,10 +1,10 @@
 ---
-title: "Paris Megaparty"
+title: ""
 address: ""
-postalCode : "75000"
+postalCode: "75000"
 city: "Paris"
 label: ""
-when: ""
+when: {{ .Date }}
 description: ""
 photos: ""
 important: false

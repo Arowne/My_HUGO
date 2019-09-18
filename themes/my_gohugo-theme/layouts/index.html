@@ -7,6 +7,7 @@
         <div class="intro-text">
             <div class="intro-lead-in">Welcome to Lyon!</div>
             <div class="intro-heading text-uppercase">Get the best events !</div>
+            {{  partial "town-hall-presentation.html" . }}
             <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/events">Commming soon !</a>
         </div>
         </div>
@@ -22,14 +23,13 @@
               <div class="row">
                 <div class="col-lg-12">
                   <ul class="timeline">
-                     {{ range first 10 .Data.Pages }}
+                     {{ range last 10 .Data.Pages }}
 
                         {{ if eq .Type "events"}}
 
-
                             <li>
                                 <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="{{ .Params.photos }}" alt="">
+                                <img class="rounded-circle img-fluid h-100" src="{{ .Params.photos }}" alt="">
                                 </div>
                                 <div class="timeline-panel">
                                 <div class="timeline-heading">

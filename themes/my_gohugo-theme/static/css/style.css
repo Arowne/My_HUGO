@@ -79,3 +79,15 @@ body {
 #contact {
     background-size: 20% auto;
 }
+
+.img-org{
+	height: 225px!important;
+	width: 225px!important;
+}
+
+.text-red{
+	color: red;
+}
+.text-light {
+	color: white;
+}

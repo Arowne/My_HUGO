@@ -1,0 +1,8 @@
+    
+{{ range .Site.RegularPages }}
+
+   {{ if eq .Type "presentation"}}
+        <h4 class="subheading font-italic mb-4">{{ .Params.Content }}</h4>
+    {{ end }}
+    
+{{ end }}

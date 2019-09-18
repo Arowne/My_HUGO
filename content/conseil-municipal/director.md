@@ -2,5 +2,5 @@
 firstName: "Jean-jacques"
 lastName: "Ma"
 role : "Director"
-photos: "/img/profil.png"
+photos: "/img/team/2.jpg"
 ---
