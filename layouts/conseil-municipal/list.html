@@ -1,12 +1,27 @@
 {{  partial "header.html" . }}
-<div class="jumbotron">
-    {{  range  first 10 .Data.Pages }}
-        {{ if eq .Type "conseil-municipal" }}
-            <div class="jumbotron">
-                <h1 class="display-4">{{ .Params.firstNames }} {{ .Params.lastNames }}</h1>
-                <h6 class="font-italic text-secondary">{{ .Params.Role }}</h6>
-                <hr class="my-4">
+
+
+    <section class="bg-light page-section mt-5" id="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Municipal Council</h2>
+              <h3 class="section-subheading text-muted">Here you can find people how's </h3>
             </div>
-        {{ end }}
-    {{ end }}
-</div>
+          </div>
+            {{  range .Data.Pages }}
+                {{ if eq .Type "conseil-municipal" }}
+                <div class="row">
+                    <div class="col-sm-4">
+                      <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="/img/team/1.jpg" alt="">
+                        <h1 class="display-4">{{ .Params.firstNames }} {{ .Params.lastNames }}</h1>
+                        <p class="text-muted">{{ .Params.Role }}</p>
+                      </div>
+                    </div>
+                {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </section>
+{{  partial "footer.html" . }}

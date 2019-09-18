@@ -1,0 +1,28 @@
+{{  partial "header.html" . }}
+
+<div class="jumbotron mt-5 mb-0">
+    <h1 class="text-center">Calendar</h1>
+    <div class="date-list d-none">
+        {{  range .Site.RegularPages }}
+            {{ if eq .Type "events" }}
+                <h6 class="font-italic text-secondary event-date">{{ .Params.When }}</h6>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="col-md-12 team-grids bg-light p-5 pb-0" style="background-color: white;">
+        <div class="myCalendar border-shadow p-5">
+            <div class="hello-week__header">
+                <div class="hello-week__label"></div>
+            </div>
+                <div class="hello-week__week"></div>
+                <div class="hello-week__month"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ range .Site.Params.calendar_js }}
+    <script rel="stylesheet" src="{{ . | absURL }}"> </script>
+{{- end }}
+
+{{  partial "footer.html" . }}

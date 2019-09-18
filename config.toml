@@ -4,4 +4,7 @@ title = "My New Hugo Site"
 theme = "my_gohugo-theme"
 
 [params]
-    custom_css = ["css/style.css"]
+    custom_css = ["css/style.css", "css/agency.min.css", "js/hello-week-master/dist/css/hello.week.theme.min.css", "js/hello-week-master/dist/css/hello.week.min.css"]
+    custom_js = ["js/hello-week-master/dist/hello.week.min.js", "js/mail.js", "js/agency.js", "js/jqBootstrapValidation.js", "js/search.js", "js/calendar.js"]
+    logo_source = ["img/logo.png"]
+    calendar_js = ["js/hello-week-master/dist/hello.week.min.js", "js/calendar.js"]

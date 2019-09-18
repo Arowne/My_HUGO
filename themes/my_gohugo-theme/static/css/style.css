@@ -8,18 +8,23 @@ body {
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
-    background-color: #111;
+    right: 0;
+    background-color:red;
     overflow-x: hidden;
     padding-top: 20px;
+    text-align: center;
 }
 
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 12px;
     display: block;
+}
+
+.association-link {
+    font-size: 20px!important;
+    color: white!important;
 }
 
 .sidenav a:hover {
@@ -27,11 +32,11 @@ body {
 }
 
 .main, .jumbotron, nav {
-    margin-left: 280px;
+    margin-right: 280px; 
     /* Same as the width of the sidenav */
-    font-size: 28px;
+    font-size: 24px; 
     /* Increased text to enable scrolling */
-    padding: 0px 10px;
+    padding: 0px 50px;
 }
 
 @media screen and (max-height: 450px) {
@@ -41,4 +46,20 @@ body {
     .sidenav a {
         font-size: 18px;
     }
+} 
+
+.bg-image-full{
+    height: 500px;
+}
+.jumbotron {
+    margin-bottom: 0px!important;
+}
+
+.logo {
+    height: 50px;
+    width: 90px;
+}
+
+.list-group-item {
+    color: black!important;
 }

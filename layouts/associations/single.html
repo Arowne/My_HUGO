@@ -1,8 +1,15 @@
 {{  partial "header.html" . }}
-
-<div class="jumbotron">
-    <h1 class="display-4"> {{ .Title }} </h1>
-    <p class="font-italic text-secondary">{{ .Params.Address }} <br> {{ .Params.Domain }}</p>
-    <p class="lead">{{ .Description }}</p>
-    <hr class="my-4">
+<div class="container-fluid mt-5 ml-0 mr-0 p-0">
+    <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
+        <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&amp;text=Logo" alt="">
+    </header>
+    <section class="py-5">
+        <div class="container">
+            <a href="{{ .Permalink  }}"><h1 class="display-4">{{ .Title }}</h1></a>                  
+            <p class="font-italic text-secondary">{{ .Params.Address }} <br> {{ .Params.Domain }}</p>                  
+            <p class="lead">{{ .Description }}</p>
+        </div>
+    </section>
 </div>
+
+{{  partial "footer.html" . }}

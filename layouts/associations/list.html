@@ -1,11 +1,18 @@
 {{  partial "header.html" . }}
-<div class="jumbotron">
+<div class="container-fluid mt-5 ml-0 mr-0 p-0">
     {{  range  first 10 .Data.Pages }}
         {{ if eq .Type "associations" }}
-            <h1 class="display-4"><a href="{{ .Permalink  }}">{{ .Title }}</a></h1>
-            <p class="font-italic text-secondary">{{ .Params.Address }} <br> {{ .Params.Domain }}</p>
-            <p class="lead">{{ .Description }}</p>
+            <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
+            </header>
+            <section class="py-5">
+                <div class="container">
+                    <a href="{{ .Permalink  }}"><h1 class="display-4">{{ .Title }}</h1></a>                  
+                    <p class="font-italic text-secondary">{{ .Params.Domain }}</p>                  
+                </div>
+             </section>
             <hr class="my-4">
         {{ end }}
     {{ end }}
 </div>
+
+{{  partial "footer.html" . }}

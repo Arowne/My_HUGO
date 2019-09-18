@@ -1,9 +1,17 @@
 {{  partial "header.html" . }}
-<div class="jumbotron">
-    <h1 class="display-4">{{ .Title }}</h1>
-    <h6 class="font-italic text-secondary">{{ .Params.Association }} {{ .Params.When }}</h6>
-    <h4 class="display-6">{{ .Params.Label }}</h4>
-    <h5 class="display-6">{{ .Params.Address }} {{ .Params.City }}</h5>
-    <p class="text-secondary">{{ .Description }}</p>
-    <hr class="my-4">
-</div>
+
+    <div class="jumbotron mt-5 p-0 ml-0 mr-0">
+        <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
+        </header>
+        <section class="py-5">
+            <div class="container">
+                <a href="{{ .Permalink  }}"><h4 class="display-4">{{ .Title }}</h4></a>                  
+                <h6 class="font-italic text-secondary">{{ .Params.Association }} {{substr .Params.When 0 -15}} {{substr .Params.When -10 5}}</h6>
+                <h4 class="display-6">{{ .Params.Label }}</h4>
+                <h5 class="display-6">{{ .Params.Address }} {{ .Params.City }}</h5>
+                <p class="text-secondary">{{ .Description }}</p>                
+            </div>
+         </section>
+    </div>
+
+{{  partial "footer.html" . }}
