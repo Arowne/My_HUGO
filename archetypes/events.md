@@ -11,5 +11,4 @@ important: false
 association: "paris-organisation"
 draft: false
 important: false
-association: false
 ---

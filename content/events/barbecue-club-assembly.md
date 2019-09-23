@@ -11,5 +11,4 @@ important: false
 association: "Barbecue Social Club"
 draft: false
 important: false
-association: false
 ---

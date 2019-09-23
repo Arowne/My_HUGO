@@ -11,5 +11,4 @@ important: false
 association: "Jeune informaticien de Lyon"
 draft: false
 important: false
-association: false
 ---

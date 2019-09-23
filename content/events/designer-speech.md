@@ -11,5 +11,4 @@ important: false
 association: "L'amical des designer"
 draft: false
 important: false
-association: false
 ---

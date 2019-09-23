@@ -11,5 +11,4 @@ important: false
 association: "Vegan Club"
 draft: false
 important: false
-association: false
 ---
